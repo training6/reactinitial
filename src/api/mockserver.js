@@ -27,7 +27,7 @@ export function makeServer({ environment = 'test' } = {}) {
       this.timing = 2000
 
       this.get('/', (schema, request) => {
-        return schema.hotels.all();
+        return schema.hotels.all().models;
       });
       this.post('/subscribe', (schema, request) => {
         let attrs = JSON.parse(request.requestBody);
