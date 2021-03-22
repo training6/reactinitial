@@ -15,7 +15,7 @@ const App = () => {
     fetch('https://api/hotels')
     .then(res => res.json())
     .then(data => setHotels(data))
-    .catch(err => setHotelss(null))
+    .catch(err => setHotels(null))
     .finally(() => setIsLoadingHotels(false))
   }, [])
   
